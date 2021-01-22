@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script language="JavaScript" src="js/main.js"></script>
+    <title>Trabalho Web</title>
+  </head>
+  <body>
+    <h1>Trabalho De desenvolvimento WEB I - Brenno Gonçalves Miranda</h1>
+    <hr />
+    <form>
+      <h2>
+        Matéria: Linguagem de programação II - lista 1 (POO) - Exercício 5
+      </h2>
+      <h3>
+        Enunciado:
+        <p>
+          Altere a classe “Pessoa” do exercício anterior de modo que ela seja
+          capaz de calcular o Índice de Massa Corporal (IMC). O cálculo é feito
+          através da fórmula IMC = peso/altura2 . Adicionalmente, implemente um
+          método que informa a faixa de categoria do IMC que a pessoa se
+          encontra, utilizando a seguinte tabela.
+        </p>
+        <img id="tabela" src="./imagens/tabela.jpg" alt="foto da tabela" />
+      </h3>
+      <fieldset>
+        <legend>Calculador de IMC</legend>
+        <table>
+          <tr>
+            <td>
+              <label for="val1">
+                Peso: <input type="number" name="val1" id="val1" />
+              </label>
+            </td>
+
+            <td>
+              <label for="val2 ">
+                Altura:
+                <input type="number" name="val2" id="val2" step="0.01" />
+              </label>
+            </td>
+
+            <td>
+              <input
+                type="button"
+                value="Calcular"
+                onclick="calcular();"
+                name=""
+                id="botao"
+              />
+            </td>
+            <td>
+              Resultado:
+              <input type="text" name="result" id="result" readonly="true" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <p id="erro" name="erro"></p>
+
+      <br />
+      <hr />
+      <h2>
+        Matéria: Linguagem de programação II - lista 2 (POO) - Exercício 4
+      </h2>
+      <h3>
+        Enunciado:
+        <p>
+          Crie uma classe Calculadora que faça as quatro operações básicas
+          (soma, subtração, multiplicação e divisão).
+        </p>
+      </h3>
+      <fieldset>
+        <legend>Calculadora</legend>
+        <table>
+          <tr>
+            <td>
+              <label for="valor1">
+                Valor 1: <input type="number" name="valor1" id="valor1" />
+              </label>
+            </td>
+
+            <td>
+              <select name="sinal" id="sinal">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+              </select>
+            </td>
+
+            <td>
+              <label for="valor2">
+                Valor 2: <input type="number" name="valor2" id="valor2" />
+              </label>
+            </td>
+
+            <td>
+              <input
+                type="button"
+                value="Calcular"
+                id="botao"
+                onclick="calculadora();"
+              />
+            </td>
+            <td>
+              Resultado:
+              <input
+                type="text"
+                name="resultadocal"
+                id="resultadocal"
+                readonly="true"
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <hr />
+      <br />
+      <h2>
+        Matéria: Linguagem de programação II - lista 2 (POO) - Exercício 5
+      </h2>
+      <h3>
+        Enunciado:
+        <p>
+          Para cada produto informado (nome, preço e quantidade), escreva o nome
+          do produto comprado e o valor total a ser pago, considerando que são
+          oferecidos descontos pelo número de unidades compradas, segundo a
+          tabela abaixo: a) Até 10 unidades: valor total, b) de 11 a 20
+          unidades: 10% de desconto, c) de 21 a 50 unidades: 20% de desconto, d)
+          acima de 50 unidades: 25% de desconto.
+        </p>
+      </h3>
+      <fieldset id="produt">
+        <legend>Calculador de Produtos</legend>
+        <table>
+          <tr>
+            <td>
+              <label for="nomeprodut">
+                Nome: <input type="text" name="nomeprodut" id="nomeprodut" />
+              </label>
+            </td>
+            <td>
+              <label>
+                Preço unitário:
+                <input
+                  type="number"
+                  name="porecoprodut"
+                  id="precoprodut"
+                  step="0.10"
+                />
+              </label>
+            </td>
+            <td>
+              <label for="quantprodut">
+                Quantidade:
+                <input type="number" name="quantprodut" id="quantprodut" />
+              </label>
+            </td>
+            <td>
+              <input
+                type="button"
+                value="Calcular"
+                id="botao"
+                onclick="calculardesc();"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Nome do Produto:
+              <input
+                type="text"
+                name="resultprodut"
+                id="resultprodut"
+                readonly="true"
+              />
+            </td>
+            <td>
+              Valor a pagar (R$):
+              <input
+                type="text"
+                name="resultadpordut"
+                id="resultadpordut"
+                readonly="true"
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <p id="erro1" name="erro1"></p>
+      <hr />
+      <br />
+      <h2>
+        Matéria: Linguagem de programação II - lista 1 (Modular) - Exercício 5
+      </h2>
+      <h3>
+        Enunciado:
+        <p>
+          Desenvolva um programa que receba via teclado o número do CPF do
+          usuário e o valide através de uma função C#.
+        </p>
+      </h3>
+      <fieldset>
+        <legend>Verifica CPF</legend>
+        <table>
+          <tr>
+            <td>
+              <label for="primeiros">
+                Primeiros 9 digitos:
+                <input
+                  type="text"
+                  name="primeiros"
+                  id="primeiros"
+                  maxlength="9"
+                  size="15"
+                />
+              </label>
+            </td>
+            <td>
+              <label for="ultimos">
+                Ultimos 2 digitos:
+                <input type="text" name="ultimos" id="ultimos" maxlength="2" />
+              </label>
+            </td>
+            <td>
+              Resultado:
+              <input
+                type="text"
+                name="cpfresult"
+                id="cpfresult"
+                readonly="true"
+                size="10"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                value="Verificar"
+                id="botao"
+                onclick="verificacpf();"
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <p id="erro2" name="erro2"></p>
+    </form>
+  </body>
+</html>
